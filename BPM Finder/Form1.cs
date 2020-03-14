@@ -31,7 +31,7 @@ namespace BPM_Finder
         }
 
         #region Events
-        private void TapButton_Click(object sender, EventArgs e)
+        private void TapButton_KeyPress(object sender, KeyPressEventArgs e)
         {
             UpdateBPM();
         }
@@ -107,6 +107,7 @@ namespace BPM_Finder
             AvgBPM.Text = NearestWhole.Text = TapTimes.Text = "-";
         }
         #endregion
+
     }
 
     public static class FormExtensions

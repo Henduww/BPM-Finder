@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.InfoPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.HeaderLabel = new System.Windows.Forms.Label();
             this.ResetInstructions4 = new System.Windows.Forms.Label();
             this.ResetBPMButton = new System.Windows.Forms.Button();
             this.ResetInstructions3 = new System.Windows.Forms.Label();
@@ -53,17 +55,15 @@
             this.CreatorLabel = new System.Windows.Forms.Label();
             this.MetronomeImage = new System.Windows.Forms.PictureBox();
             this.InstructionsPanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.HeaderLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.InfoPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SecondsToReset)).BeginInit();
             this.TapTimes_Panel.SuspendLayout();
             this.NearestWhole_Panel.SuspendLayout();
             this.AvgBPM_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MetronomeImage)).BeginInit();
             this.InstructionsPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // InfoPanel
@@ -87,6 +87,27 @@
             this.InfoPanel.Name = "InfoPanel";
             this.InfoPanel.Size = new System.Drawing.Size(213, 517);
             this.InfoPanel.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.HeaderLabel);
+            this.panel2.Location = new System.Drawing.Point(-2, -2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(216, 80);
+            this.panel2.TabIndex = 12;
+            // 
+            // HeaderLabel
+            // 
+            this.HeaderLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HeaderLabel.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeaderLabel.ForeColor = System.Drawing.Color.Silver;
+            this.HeaderLabel.Location = new System.Drawing.Point(0, 0);
+            this.HeaderLabel.Name = "HeaderLabel";
+            this.HeaderLabel.Size = new System.Drawing.Size(214, 78);
+            this.HeaderLabel.TabIndex = 1;
+            this.HeaderLabel.Text = "BPM FINDER";
+            this.HeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ResetInstructions4
             // 
@@ -295,7 +316,7 @@
             this.TapButton.TabIndex = 1;
             this.TapButton.Text = "button1";
             this.TapButton.UseVisualStyleBackColor = true;
-            this.TapButton.Click += new System.EventHandler(this.TapButton_Click);
+            this.TapButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TapButton_KeyPress);
             // 
             // InstructionsLabel
             // 
@@ -325,7 +346,7 @@
             // MetronomeImage
             // 
             this.MetronomeImage.Image = ((System.Drawing.Image)(resources.GetObject("MetronomeImage.Image")));
-            this.MetronomeImage.Location = new System.Drawing.Point(65, 226);
+            this.MetronomeImage.Location = new System.Drawing.Point(65, 222);
             this.MetronomeImage.Name = "MetronomeImage";
             this.MetronomeImage.Size = new System.Drawing.Size(221, 204);
             this.MetronomeImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -343,27 +364,6 @@
             this.InstructionsPanel.Name = "InstructionsPanel";
             this.InstructionsPanel.Size = new System.Drawing.Size(357, 517);
             this.InstructionsPanel.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.HeaderLabel);
-            this.panel2.Location = new System.Drawing.Point(-2, -2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(216, 80);
-            this.panel2.TabIndex = 12;
-            // 
-            // HeaderLabel
-            // 
-            this.HeaderLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HeaderLabel.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeaderLabel.ForeColor = System.Drawing.Color.Silver;
-            this.HeaderLabel.Location = new System.Drawing.Point(0, 0);
-            this.HeaderLabel.Name = "HeaderLabel";
-            this.HeaderLabel.Size = new System.Drawing.Size(214, 78);
-            this.HeaderLabel.TabIndex = 1;
-            this.HeaderLabel.Text = "BPM FINDER";
-            this.HeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -389,13 +389,13 @@
             this.Text = "BPM Finder";
             this.InfoPanel.ResumeLayout(false);
             this.InfoPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SecondsToReset)).EndInit();
             this.TapTimes_Panel.ResumeLayout(false);
             this.NearestWhole_Panel.ResumeLayout(false);
             this.AvgBPM_Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MetronomeImage)).EndInit();
             this.InstructionsPanel.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
