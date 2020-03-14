@@ -1,17 +1,17 @@
 # BPM Finder
 An application with a sweet and simple UI that allows you to find the tempo of a song with ease.
 
-**Preview**
+**Preview:**
 
 ![Screenshot of UI](https://i.gyazo.com/42930d41dbb4b13e99d76afe44095b68.png)
 
 ## Downloading and running
 To download the program, simply head to the *"Releases"* tab and install the executable file (**BPM Finder.exe**).
 
-No installation is required, and the program can be executed immediatly after installing.
+No installation is required, and the program can be executed immideatly after installing.
 
 ## How to use the BPM finder
-Once the application is opened, tap any key on your keyboard to the tempo of the song.
+Once the application is opened, tap any key on your keyboard to the tempo of any song.
 This will calculate both the average tempo in which you are tapping, as well as the nearest whole BPM.
 
 ## Heavily based on Richard T. Reels web tool
